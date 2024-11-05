@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go to Callsite</title>
+    <style>
+        /* Basic styling for the link */
+        .linkbutton {
+            background-color: #4CAF50; /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 15px 32px; /* Some padding */
+            text-align: center; /* Center-aligned text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Inline-block for spacing */
+            font-size: 16px; /* Font size */
+            margin: 4px 2px; /* Margin around the button */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 8px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .linkbutton:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        html, body {
+            background-color: black;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full height for centering */
+            margin: 0; /* Remove default margin */
+        }
+        p {
+            color: aqua;
+            margin: 0; /* Remove default margin for paragraphs */
+        }
+        h1 {
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <h1><big>Press the button below</big></h1>
+    <label id="label">
+        <blockquote>
+            <p><ins>Go to</ins> <b>Callsite</b></p>
+        </blockquote>
+    </label>
+    <section id="download">
+        <div class="download-buttons">
+            <p>Click the button to go to Callsite:</p>
+            <a href="pro_callsite.html" class="linkbutton">
+                Go to Callsite
+            </a>
+        </div>
+    </section>
+</body>
+</html>

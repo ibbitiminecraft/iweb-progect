@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iweb</title>
+    <link rel="icon" type="image/x-icon" href="iweblogo.png">
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(22, 196, 181, 0.3),
+        rgba(28, 181, 215, 0.75)
+    ), url("logo.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.naver {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    color: black;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #2d8e8b;
+    text-decoration: underline;
+    text-decoration-color: springgreen;
+    font-size: large;
+    font-weight: bolder;
+
+}
+
+h1 {
+    color: transparent;
+    background: rgb(2,0,36);
+    background: linear-gradient(27deg, rgba(2,0,36,1) 0%, rgba(17,200,132,1) 43%, rgba(2,210,252,1) 90%, rgba(0,212,255,1) 100%);
+    background-clip: text;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid rgb(53, 107, 89);
+}
+
+label {
+    color:transparent;
+    padding: 20px;
+    margin: 10px;
+    background: rgb(0,119,255);
+background: linear-gradient(34deg, rgba(0,119,255,1) 16%, rgba(2,210,252,1) 37%, rgba(255,0,0,1) 53%, rgba(0,212,255,1) 65%);
+background-clip: text;
+}
+
+h2 {
+    color: transparent;
+    background: rgb(2,0,36);
+background: linear-gradient(27deg, rgb(13, 0, 255) 0%, rgb(255, 0, 0) 43%, rgba(2,210,252,1) 90%, rgba(0,212,255,1) 100%);
+background-clip: text;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: aquamarine;
+    margin: 20px;
+    box-shadow: 0 0 20px 5px rgba(43, 0, 255, 0.361);
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid blue;
+    text-align: left;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #02fd9430;
+}
+
+tr:nth-child(odd) {
+    background-color: #17b473;
+}
+
+.naver a {
+    color: #ffffff;
+    font-size: medium;
+    text-decoration: none;
+    padding: 10px; /* Adjusted padding for better spacing */
+}
+
+legend {
+    color: transparent;
+    background: rgb(0,119,255);
+background: linear-gradient(34deg, rgba(0,119,255,1) 16%, rgba(2,210,252,1) 37%, rgba(255,0,0,1) 53%, rgba(0,212,255,1) 65%);
+  background-clip: text;
+
+}
+
+button {
+    border-radius: 15%;
+    color: white;
+    background-color: rgba(29, 216, 154, 0.729);
+    width: 64px;
+    height: 32px;
+    box-shadow: 0 0 20px 5px rgba(43, 109, 89, 0.98);
+    transition: transform 0.2s; /* Add transition for hover effect */
+}
+
+button:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    color: #0400ff;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Adjusted margin for better spacing */
+    }
+}
+p{
+  color: transparent;
+  background: rgb(0,119,255);
+background: linear-gradient(34deg, rgba(0,119,255,1) 6%, rgba(2,210,252,1) 7%, rgba(255,0,0,1) 5%, rgb(0, 255, 64) 6%);
+background-clip: text;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="iweb-app">
+      <div class="banner">
+        <header class="navbar">
+          <ul>
+            <li><a href="h11.html">Calculator</a></li>
+            <li><a href="https://chatgpt.com/">chat-gpt</a></li>
+            <li><a href="__init__logo.html">Callisite</a></li>
+            <li><a href="23.html">Story Writer</a></li>
+            <li><a href="8.html">More Information</a></li>
+            <li><a href="need-help.html">Sky Island</a></li>
+            <li><a href="game.html">Sky Block</a></li>
+            <li><a href="mariokart.html">Mario Kart Game</a></li>
+            <li><a href="mega progect.html">Square Spinner Loader</a></li>
+            <li><a href="circle.html">Circle</a></li>
+            <li><a href="9.html">Solar System</a></li>
+            <li><a href="star.html">Star Spinner</a></li>
+            <!--mega spiner-->
+            <li><a href="ji.html">Mega Spinner</a></li>
+            <li class="button-line">
+              <button id="mybutton" type="button">Meaning</button>
+            </li>
+            <li>
+              <button id="m.b">press to exit</button>
+            </li>
+          </ul>
+          <div class="naver">
+            <ul>
+            <li><a href="https://workspace.google.com/products/meet/" target="_blank">Meeting</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+          </ul>
+          </div>
+        </header>
+
+        <main class="content">
+          <fieldset>
+            
+            <legend>Get Ready</legend>
+            <label id="intro">Intro</label>
+            <h1>Welcome to the iwebs</h1>
+            <hr />
+            <h2>Hope you like it!</h2>
+            <p>It has many applications.</p>
+            <p><i>Is it cool?</i></p>
+            <h1>Applications</h1>
+            <table>
+              <tr>
+                <th>Application</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>Calculator</td>
+                <td class="description">A simple tool for basic calculations.</td>
+              </tr>
+              <tr>
+                <td>Story Writer</td>
+                <td class="description">Create and save your own stories.</td>
+              </tr>
+              <tr>
+                <td>Sky Block</td>
+                <td class="description">A fun building and survival game.</td>
+              </tr>
+              <tr>
+                <td>Mario Kart Game</td>
+                <td class="description">Race with your friends in this classic game.</td>
+              </tr>
+            </table>
+          </fieldset>
+          
+          </div>
+          <section class="5">
+            
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; iweb. All rights reserved.</p>
+    </footer>
+
+    <script src="2.ts">
+    </script>
+  </body>
+</html>

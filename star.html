@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Spinner</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+        }
+        .spinerstar {
+            background-color: greenyellow; /* Star color */
+            clip-path: polygon(
+                50% 0%,
+                61% 35%,
+                98% 35%,
+                68% 57%,
+                79% 91%,
+                50% 70%,
+                21% 91%,
+                32% 57%,
+                2% 35%,
+                39% 35%
+            );
+            height: 200px; /* Star height */
+            width: 200px; /* Star width */
+            animation: spin 2.5s linear infinite; /* Spin animation */
+            box-shadow: 0 0 20px rgba(22, 68, 68, 0.5); /* Glow effect */
+            border: 1px solid darkgreen;
+            border-top: 25px solid cadetblue;
+            border-bottom: 25px solid cadetblue;
+            border-left: 25px solid cadetblue;
+            border-right: 25px solid cadetblue;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg); /* Full rotation */
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="spinerstar"></div> 
+</body>
+</html>

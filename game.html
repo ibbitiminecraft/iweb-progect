@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Block Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #24868d;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<h1>You finished the game</h1>
+
+<script>
+    // Introduction
+    function introduction() {
+        alert("Welcome to the game of Sky Block");
+    }
+
+    // Option Checker
+    function optionChecker() {
+        let option = parseInt(prompt("Press 1 to play\nPress 2 to quit\nPress 3 to change:"));
+        return option;
+    }
+
+    // Input Name
+    function inputName() {
+        let name = prompt("Enter your name:");
+        let friendName = prompt("Enter your friend's name:");
+        return [name, friendName];
+    }
+
+    // Sky Block Change
+    function skyBlockChange() {
+        let option = parseInt(prompt("Changing Sky Block mod:\nPress 4 for Hard Block\nPress 5 for Lucky Block\nPress 6 for Normal Block"));
+        return option;
+    }
+
+    // Create Normal Block
+    function createNormalBlock(name, friendName) {
+        alert("Where are we?");
+        alert("Maybe if we break the block we will go back.");
+        alert("It didn't work.");
+        alert("Look, a portal!");
+        alert("And when we broke the block...");
+        alert("Now there are 2 blocks.");
+        let option = parseInt(prompt("Press 7 to break block\nPress 8 to jump:"));
+        alert("Breaking blocks is fun!");
+        alert("Now we made a whole island out of blocks.");
+        alert("Look, a box! There is very good loot.");
+        alert(`Look, a teleporter! said ${name}. Ok, said ${friendName}.`);
+        alert("We teleported to the portal.");
+        return option;
+    }
+
+    // Create Lucky Block
+    function createLuckyBlock() {
+        alert("Where are we?");
+        alert("Maybe if we break the block we will go back.");
+        alert("It didn't work.");
+        alert("Look, a portal!");
+        alert("And we broke the block...");
+        alert("Wow, we got something good!");
+        let option = parseInt(prompt("Press 9 to break block\nPress 10 to jump:"));
+        alert("Breaking blocks is fun!");
+        alert("Look, a teleporter!");
+        alert("We teleported to the portal.");
+        return option;
+    }
+
+    // Create Hard Block
+    function createHardBlock() {
+        alert("Where are we?");
+        alert("Maybe if we break the block we will go back.");
+        alert("It didn't work.");
+        alert("Look, a portal!");
+        alert("A volcano! Run!");
+        let option = parseInt(prompt("Press 11 to break block\nPress 12 to jump\nPress 13 to fly jump:"));
+        alert("Breaking blocks is fun!");
+        alert("Now we made a whole island out of blocks.");
+        alert("Look, a box! There is very good loot.");
+        alert("Look, a teleporter!");
+        alert("We teleported to the portal.");
+        return option;
+    }
+
+    // Going Back to Real World
+    function goingBackToRealWorld() {
+        alert("Yes, we are finally going back home!");
+        alert("We're going back to the real world! That was fun!! Right?");
+    }
+
+    // Saying Goodbye
+    function sayingBye() {
+        alert("Goodbye! Hope you enjoyed the Sky Block game.");
+    }
+
+    // Dead Function
+    function dead() {
+        alert("You died in some way.");
+        exit();
+    }
+
+    // Main Function
+    function main() {
+        introduction();
+        let option = optionChecker();
+        
+        if (option === 1) {
+            alert("Get ready to play!");
+            let [name, friendName] = inputName();
+            option = createNormalBlock(name, friendName);
+            goingBackToRealWorld();
+        } else if (option === 3) {
+            alert("Changing...");
+            let changeOption = skyBlockChange();
+            
+            if (changeOption === 4) {
+                alert("Hard Block selected.");
+                option = createHardBlock();
+                if (option === 11 || option === 12) {
+                    dead();
+                } else if (option === 13) {
+                    alert("Into the portal!!!");
+                    goingBackToRealWorld();
+                }
+            } else if (changeOption === 5) {
+                alert("Lucky Block selected.");
+                option = createLuckyBlock();
+                if (option === 9) {
+                    alert("Getting more lucky items.");
+                    goingBackToRealWorld();
+                } else {
+                    dead();
+                }
+            } else if (changeOption === 6) {
+                alert("Normal Block selected.");
+                let [name, friendName] = inputName();
+                option = createNormalBlock(name, friendName);
+                if (option === 7) {
+                    alert("We're getting more blocks.");
+                    goingBackToRealWorld();
+                } else {
+                    dead();
+                }
+            }
+        } else if (option === 2) {
+            sayingBye();
+        } else {
+            alert("Invalid option.");
+        }
+    }
+
+    // Start the game
+    main();
+</script>
+
+</body>
+</html>

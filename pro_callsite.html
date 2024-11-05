@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Button</title>
+    <style>
+        @counter-style custom-counter {
+            system: numeric;
+            symbols: "➀" "➁" "➂" "➃" "➄" "➅" "➆" "➇" "➈" "➉"; /* Custom symbols */
+            suffix: ". "; /* Suffix after each number */
+        }
+
+        body {
+            background-color: black;
+            display: flex; /* Use flexbox to center content */
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full height of the viewport */
+            margin: 0; /* Remove default margin */
+        }
+
+        button {
+            background-color: green;
+            color: white; /* Change text color for better contrast */
+            border: none; /* Remove default border */
+            padding: 15px 30px; /* Add padding */
+            font-size: 20px; /* Increase font size */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor on hover */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: darkgreen; /* Change color on hover */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            button {
+                padding: 10px 20px; /* Smaller padding on small screens */
+                font-size: 16px; /* Adjust font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="e" type="button">Start</button>
+    <script src="1.js"></script>
+</body>
+</html>

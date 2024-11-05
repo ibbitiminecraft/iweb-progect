@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my special story website with only html</title>
+</head>
+<body>
+
+</body>
+</html>
+        <h1>story</h1>
+        <style>
+            body{
+                background-color: aqua;
+                display: flex;
+            }
+            h1{
+                color: blue;
+            }
+            h2{
+                color: aquamarine;
+            }
+            h3{
+                color: rgba(red, green, blue, alpha);
+            }
+            h4{
+                color: cadetblue;
+            }
+            h5{
+                color: #0e81ab;
+            }
+            h6{
+                color: darkcyan;
+            }
+            .p1{
+                color: gold;
+            }
+            .p2{
+                color: greenyellow;
+            }
+            .p3{
+                color: green;
+            }
+            li{
+                color: darkred;
+            }
+            content{
+            margin-top: 30px;
+            border: 1px solid gray;
+            height: 500px;
+            width: 900px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 40px;
+            }
+        </style>
+
+    <section id="contact">
+        </section>
+<h2>Contact</h2>
+    <form id="contactForm">
+    <input type="text" id="title" enter title="enter title" required="">
+    <input type="text" id="enter-story"enter story="enter story" required="">
+    <add>enter story</add>
+    <button type="submit">Send</button>
+    </form >
+        <h3>haunted house</h3>
+        <p1>once upon a time  and  wanted to go to the haunted house they found 5 days ago
+        once they made it there they ran all around the place from scary things
+        then and  found two rooms and went in one room went in another
+        meted a monster
+        found gems and gold
+        and  took down the monster together
+        the end</p1>
+
+        <h4>fake island</h4>
+        <p2>once upon a time and wanted to go an island beach
+    so  and  hopped in their boat and sailed to the island
+    but, they didn't know that it was a fake island
+    Curious adventurer and stepped through
+    finding them self in a realm where time flowed backward and every wish came true
+    then they ran home
+    the end</p2>
+
+        <h5>the two stories in the story made by ibrahim</h5>
+    <li>haunted house</li>
+    <li>fake island</li>
+</nav>
+<h6 id="titleForm"></h6>
+<p id="storyForm"></p>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the default form submission
+  const title = document.getElementById("title").value;
+  const story = document.getElementById("enter-story").value;
+  document.getElementById("titleForm").innerText = `${title}`;
+  document.getElementById("storyForm").innerText = `${story}`;
+});
+
+</script>
+
+</body>
+
+</html>

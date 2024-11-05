@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sky island game</title>
+    <style>
+        body{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<script>
+    // Introduction
+function introduction() {
+    alert("Welcome to the game of Sky Island");
+}
+
+// Option Checker
+function optionChecker() {
+    let option = parseInt(prompt("Press 1 to play\nPress 2 to quit:"));
+    return option;
+}
+
+// Input Name
+function inputName() {
+    let name = prompt("Enter your name:");
+    let friendName = prompt("Enter your friend's name:");
+    return [name, friendName];
+}
+
+// Create Beginning Island
+function createBeginningIsland() {
+    alert("Look, there is a box with the things to survive.");
+    alert("We need to get to the Cute Island.");
+    alert("Use the items to make it to the next island, but the door is very high.");
+    let option = parseInt(prompt("Here are the items where you can choose 1 item:\nPress 3 for Beach Ball\nPress 4 for Water\nPress 5 for Normal Bridge:"));
+    return option;
+}
+
+// Create Cute Island
+function createCuteIsland(name, friendName) {
+    alert(`Warning ${name} and ${friendName}`);
+    alert("It's raining cats and dogs.");
+    let option = parseInt(prompt("Press 6 for Shield\nPress 7 to Dodge\nPress 8 for Nothing\nPress 9 for Monster\nPress 10 for Lava\nPress 11 for Normal Bridge:"));
+    return option;
+}
+
+// Create Of Truth Or Lie Island
+function createOfTruthOrLieIsland(name, friendName) {
+    alert("So we made it to a random island.");
+    alert(`Look, two islands: Lie and Truth Island, ${name} and ${friendName}`);
+    alert("One of the islands has the path to the game island.");
+    let option = parseInt(prompt("Press 12 for Truth Island\nPress 13 for Lie Island:"));
+    return option;
+}
+
+// Game Island
+function gameIsland(name, friendName) {
+    alert("We made it to Game Island.");
+    alert(`Warning ${name} and ${friendName}, dodge the rocks coming from above, left, and right.`);
+    
+    let option = parseInt(prompt("Press 14 to go left\nPress 15 to go right\nPress 16 to jump:"));
+    if (option === 16) alert("Jumping!");
+    
+    alert("Now it's coming from the left.");
+    option = parseInt(prompt("Press 17 to go left\nPress 18 to go right\nPress 19 to jump:"));
+    
+    alert("Now it's coming from the right.");
+    option = parseInt(prompt("Press 20 to go left\nPress 21 to go right\nPress 22 to jump:"));
+    
+    option = parseInt(prompt("Press 23 for Bear\nPress 24 for Gas\nPress 25 for Normal Bridge:"));
+    return option;
+}
+
+// Death Island
+function deathIsland(name, friendName) {
+    alert("On Death Island, there is lava everywhere. Defeat the boss to pass.");
+    alert("There is the boss. You have to attack.");
+    let option = parseInt(prompt("Press 26 for Saw\nPress 27 for Sword:"));
+    
+    alert(`Yay, we did it ${name} and ${friendName}`);
+    option = parseInt(prompt("We need carts:\nPress 28 for Normal\nPress 29 for Gold:"));
+    alert("We're racing on a rainbow.");
+    return option;
+}
+
+// Ending Boss Lava Island
+function endingBossLavaIsland(name, friendName) {
+    alert("We've made it to the final boss.");
+    alert("If we defeat him, we will win. This won't be easy.");
+    alert(`${name} and ${friendName}, let's defeat the boss.`);
+    let option = parseInt(prompt("Press 34 for Spin Attack\nPress 35 for Sword:"));
+    
+    if (option === 35) alert("Attack - 100 monster life = 0, monster dead.");
+    return option;
+}
+
+// Going Back to the Real World
+function goingBackToTheRealWorld() {
+    alert("We're going back to the real world! That was fun!! Right?");
+}
+
+// Saying Goodbye
+function sayingBye() {
+    alert("Goodbye! Hope you enjoyed the Sky Island game.");
+}
+
+// Dead Function
+function dead() {
+    alert("You died in some way.");
+    exit();
+}
+
+// Main Function
+function main() {
+    introduction();
+    let option = optionChecker();
+    
+    if (option === 1) {
+        alert("Get ready to play!");
+        let [name, friendName] = inputName();
+        
+        option = createBeginningIsland();
+        if (option === 3) {
+            alert("We made it!");
+        } else if (option === 4) {
+            dead();
+        } else if (option === 5) {
+            alert("We can't go up.");
+        }
+        
+        option = createCuteIsland(name, friendName);
+        if (option === 7) {
+            alert("That was close.");
+        } else {
+            dead();
+        }
+
+        option = createOfTruthOrLieIsland(name, friendName);
+        if (option === 12) {
+            alert("We made it to Game Island.");
+        } else {
+            dead();
+        }
+
+        option = gameIsland(name, friendName);
+        if (option === 14 || option === 16) {
+            alert("That was close.");
+        } else {
+            dead();
+        }
+
+        option = deathIsland(name, friendName);
+        if (option === 28) {
+            alert("Yes, we defeated the monster.");
+        } else {
+            dead();
+        }
+
+        option = endingBossLavaIsland(name, friendName);
+        goingBackToTheRealWorld();
+    } else if (option === 2) {
+        sayingBye();
+    } else {
+        alert("Invalid option.");
+    }
+}
+
+// Start the game
+main();
+
+</script>
+</body>
+</html>

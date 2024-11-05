@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Spinner Loader</title>
+    <style>
+        body {
+            background-color: rgb(18, 18, 201);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+        }
+        .spinner {
+            background-color: darkcyan;
+            height: 200px;
+            width: 200px;
+            border: 1px solid rgb(139, 0, 0);
+            border-top: 25px solid cadetblue;
+            border-bottom: 25px solid cadetblue;
+            border-left: 25px solid cadetblue;
+            border-right: 25px solid cadetblue;
+            animation: spin 1.5s linear infinite; /* Adjusted animation duration */
+            box-shadow: 0 0 20px rgba(22, 68, 68, 0.5);
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg); /* Rotation in degrees */
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+</body>
+</html>
